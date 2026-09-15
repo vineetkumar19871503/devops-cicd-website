@@ -1,0 +1,9 @@
+{
+  "name": "devops-cicd-website",
+  "version": "2.0.0",
+  "description": "DevOps Training CI/CD deployment success page",
+  "scripts": {
+    "start": "npx --yes serve .",
+    "test": "node check-files.js"
+  }
+}

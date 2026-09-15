@@ -1,0 +1,128 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+  color: #e2e8f0;
+  padding: 1.5rem;
+}
+
+.card {
+  text-align: center;
+  background: rgba(30, 41, 59, 0.8);
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  border-radius: 1rem;
+  padding: 3rem 2.5rem;
+  max-width: 420px;
+  width: 100%;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+}
+
+.badge {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #22c55e;
+  background: rgba(34, 197, 94, 0.15);
+  border: 2px solid rgba(34, 197, 94, 0.4);
+  border-radius: 50%;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.3); }
+  50% { box-shadow: 0 0 0 12px rgba(34, 197, 94, 0); }
+}
+
+h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+}
+
+.status {
+  font-size: 1.125rem;
+  color: #4ade80;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+}
+
+.version {
+  font-size: 0.95rem;
+  color: #94a3b8;
+  margin-bottom: 0.5rem;
+}
+
+.version span {
+  color: #38bdf8;
+  font-weight: 600;
+}
+
+.footer {
+  font-size: 0.8rem;
+  color: #64748b;
+  margin-bottom: 2rem;
+}
+
+.counter-section {
+  border-top: 1px solid rgba(148, 163, 184, 0.15);
+  padding-top: 1.5rem;
+}
+
+.counter-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #64748b;
+  margin-bottom: 0.25rem;
+}
+
+.counter-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #38bdf8;
+  margin-bottom: 1rem;
+  transition: transform 0.15s ease;
+}
+
+.counter-value.bump {
+  transform: scale(1.15);
+}
+
+#deploy-btn {
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #0f172a;
+  background: linear-gradient(135deg, #38bdf8, #22c55e);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.65rem 1.5rem;
+  transition: opacity 0.2s ease, transform 0.15s ease;
+}
+
+#deploy-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+#deploy-btn:active {
+  transform: translateY(0);
+}
